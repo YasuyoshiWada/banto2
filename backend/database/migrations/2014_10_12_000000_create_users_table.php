@@ -21,11 +21,19 @@ class CreateUsersTable extends Migration
             $table->string('email')->unique();
             $table->string('password');
             $table->enum('status', ['active','inactive']);
+            $table->unsignedBigInteger('role_id')->nullable();
+            $table->unsignedBigInteger('branch_id')->nullable();
+            $table->integer('employee_number')->nullable();
+            $table->enum('gender', ['male','female'])->nullable();
             $table->string('address')->nullable();
             $table->string('phone_number')->nullable();
             $table->string('image')->nullable();
             $table->rememberToken();
+            $table->timestamp('birthdate')->nullable();
             $table->timestamps();
+
+            $table->foreign('role_id')->references('id')->on('roles')->onDelete('cascade');
+            $table->foreign('branch_id')->references('id')->on('branches')->onDelete('cascade');
         });
     }
 

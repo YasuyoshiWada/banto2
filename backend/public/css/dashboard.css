@@ -1,0 +1,64 @@
+@charset "UTF-8";
+#dashboard .container .dashboard-top {
+  margin-bottom: 20px;
+}
+#dashboard .container .dashboard-top .col {
+  border: 1px solid #D4D2D2;
+  height: 50px;
+  position: relative;
+}
+#dashboard .container .dashboard-top .col .title {
+  font-weight: bold;
+}
+#dashboard .container .dashboard-top .col .form-group {
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  padding: 0 20px;
+}
+#dashboard .container .dashboard-top .col .form-group::after {
+  pointer-events: none;
+  position: absolute;
+  color: #666666;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  content: "▼";
+}
+#dashboard .container .dashboard-top .col .form-group .form-control {
+  border: none;
+  padding-right: 30px;
+}
+#dashboard .container .dashboard-top .col.date-range {
+  width: 270px;
+}
+#dashboard .container .dashboard-top .col.service, #dashboard .container .dashboard-top .col.post {
+  width: 220px;
+}
+#dashboard .container .dashboard-middle {
+  margin-bottom: 20px;
+}
+#dashboard .container .dashboard-middle .col {
+  border: 1px solid #D4D2D2;
+  padding: 30px;
+}
+#dashboard .container .dashboard-middle .col .value {
+  text-align: center;
+  font-size: 45px;
+  font-weight: bold;
+  margin-top: 30px;
+}
+#dashboard .container .dashboard-middle .col .rate {
+  text-align: center;
+  margin-top: 10px;
+}
+#dashboard .container .dashboard-middle .col .vs {
+  text-align: center;
+  margin-top: 10px;
+}
+#dashboard .container .dashboard-bottom .col {
+  border: 1px solid #D4D2D2;
+  padding: 20px;
+  width: 50%;
+}
