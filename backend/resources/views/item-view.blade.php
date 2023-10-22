@@ -52,7 +52,7 @@
             </div>
 
             <div class="row mt-3 item-container">
-                    @forelse ($all_items as $item)
+                    @forelse ($items as $item)
                     <div class="col-md-3 mt-3">
                         <div class="card h-100 rounded">
                             <a href="#">

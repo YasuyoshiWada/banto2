@@ -10,4 +10,9 @@ class CategoryItemController extends Controller
     {
         return view('category.itemcategories');
     }
+
+    public function index2()
+    {
+    return view('category.edit');
+    }
 }

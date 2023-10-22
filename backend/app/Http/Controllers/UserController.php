@@ -16,4 +16,9 @@ class UserController extends Controller
     {
         return view('auth.login');
     }
+
+    public function index()
+    {
+        return view('userlist.user-list');
+    }
 }

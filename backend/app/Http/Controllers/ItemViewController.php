@@ -5,9 +5,9 @@ namespace App\Http\Controllers;
 use App\Models\Item;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\Traits\ItemTrait;
+use Illuminate\Http\Request;
 
-
-class ItemsController extends Controller
+class ItemViewController extends Controller
 {
     use ItemTrait;
 
@@ -15,6 +15,6 @@ class ItemsController extends Controller
     {
         $items = Item::paginate(10);
 
-        return view('items', ['items' => $items]);
+        return view('item-view', ['items' => $items]);
     }
 }
